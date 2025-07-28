@@ -1,0 +1,6 @@
+True
+f1d   YMM: 428, XMM: 43
+f2d   YMM: 138, XMM: 52
+Minimum, median and maximum execution time in us:
+f1d(img1d, w)          147.939   149.793   187.253
+f2d(img2d)              68.118    68.740    90.501
