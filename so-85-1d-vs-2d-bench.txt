@@ -1,9 +1,16 @@
 True
-f1d   YMM: 428, XMM: 43
-f2d   YMM: 138, XMM: 52
+True
+True
+f1d                             YMM: 428, XMM: 43
+f2d                             YMM: 138, XMM: 52
+f1d_fastest_with_empty_init     YMM: 114, XMM: 36
+f2d_alloc                       YMM: 138, XMM: 52
 Minimum, median and maximum execution time in us:
-f1d(img1d, w)          147.939   149.793   187.253
-f2d(img2d)              68.118    68.740    90.501
+f1d(img1d, w)                              147.999   148.740   217.820
+f2d(img2d)                                  67.237    67.758    87.204
+f1d_fastest_with_empty_init(img1d, w)       17.823    18.084    24.556
+f2d_alloc(img2d)                            25.027    25.337    29.896
+
 
 System info:
 --------------------------------------------------------------------------------
