@@ -4,3 +4,159 @@ f2d   YMM: 138, XMM: 52
 Minimum, median and maximum execution time in us:
 f1d(img1d, w)          147.939   149.793   187.253
 f2d(img2d)              68.118    68.740    90.501
+
+System info:
+--------------------------------------------------------------------------------
+__Time Stamp__
+Report started (local time)                   : 2025-07-27 23:27:04.932191
+UTC start time                                : 2025-07-28 05:27:04.932200
+Running time (s)                              : 1.193949
+
+__Hardware Information__
+Machine                                       : x86_64
+CPU Name                                      : znver2
+CPU Count                                     : 8
+Number of accessible CPUs                     : 8
+List of accessible CPUs cores                 : 0 1 2 3 4 5 6 7
+CFS Restrictions (CPUs worth of runtime)      : None
+
+CPU Features                                  : 64bit adx aes avx avx2 bmi bmi2
+                                                clflushopt clwb clzero cmov crc32
+                                                cx16 cx8 f16c fma fsgsbase fxsr
+                                                lzcnt mmx movbe mwaitx pclmul
+                                                popcnt prfchw rdpid rdpru rdrnd
+                                                rdseed sahf sha sse sse2 sse3
+                                                sse4.1 sse4.2 sse4a ssse3 wbnoinvd
+                                                xsave xsavec xsaveopt xsaves
+
+Memory Total (MB)                             : 64214
+Memory Available (MB)                         : 46252
+
+__OS Information__
+Platform Name                                 : Linux-6.5.0-44-generic-x86_64-with-glibc2.35
+Platform Release                              : 6.5.0-44-generic
+OS Name                                       : Linux
+OS Version                                    : #44~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Jun 18 14:36:16 UTC 2
+OS Specific Version                           : ?
+Libc Version                                  : glibc 2.35
+
+__Python Information__
+Python Compiler                               : GCC 11.4.0
+Python Implementation                         : CPython
+Python Version                                : 3.13.5
+Python Locale                                 : en_US.UTF-8
+
+__Numba Toolchain Versions__
+Numba Version                                 : 0.61.2
+llvmlite Version                              : 0.44.0
+
+__LLVM Information__
+LLVM Version                                  : 15.0.7
+
+__CUDA Information__
+CUDA Target Implementation                    : Built-in
+CUDA Device Initialized                       : True
+CUDA Driver Version                           : ?
+CUDA Runtime Version                          : ?
+CUDA NVIDIA Bindings Available                : ?
+CUDA NVIDIA Bindings In Use                   : ?
+CUDA Minor Version Compatibility Available    : ?
+CUDA Minor Version Compatibility Needed       : ?
+CUDA Minor Version Compatibility In Use       : ?
+CUDA Detect Output:
+Found 1 CUDA devices
+id 0    b'NVIDIA GeForce RTX 3050'                              [SUPPORTED]
+                      Compute Capability: 8.6
+                           PCI Device ID: 0
+                              PCI Bus ID: 6
+                                    UUID: GPU-1c33a5d0-d042-7e6c-9456-46158a8c647c
+                                Watchdog: Enabled
+             FP32/FP64 Performance Ratio: 64
+Summary:
+        1/1 devices are supported
+
+CUDA Libraries Test Output:
+None
+
+__NumPy Information__
+NumPy Version                                 : 2.2.6
+NumPy Supported SIMD features                 : ('MMX', 'SSE', 'SSE2', 'SSE3', 'SSSE3', 'SSE41', 'POPCNT', 'SSE42', 'AVX', 'F16C', 'FMA3', 'AVX2')
+NumPy Supported SIMD dispatch                 : ('SSSE3', 'SSE41', 'POPCNT', 'SSE42', 'AVX', 'F16C', 'FMA3', 'AVX2', 'AVX512F', 'AVX512CD', 'AVX512_KNL', 'AVX512_KNM', 'AVX512_SKX', 'AVX512_CLX', 'AVX512_CNL', 'AVX512_ICL')
+NumPy Supported SIMD baseline                 : ('SSE', 'SSE2', 'SSE3')
+NumPy AVX512_SKX support detected             : False
+
+__SVML Information__
+SVML State, config.USING_SVML                 : False
+SVML Library Loaded                           : False
+llvmlite Using SVML Patched LLVM              : True
+SVML Operational                              : False
+
+__Threading Layer Information__
+TBB Threading Layer Available                 : True
++-->TBB imported successfully.
+OpenMP Threading Layer Available              : True
++-->Vendor: GNU
+Workqueue Threading Layer Available           : True
++-->Workqueue imported successfully.
+
+__Numba Environment Variable Information__
+None found.
+
+__Conda Information__
+Conda Build                                   : not installed
+Conda Env                                     : 23.3.1
+Conda Platform                                : linux-64
+Conda Python Version                          : 3.10.8.final.0
+Conda Root Writable                           : True
+
+__Installed Packages__
+_libgcc_mutex             0.1                        main    intel
+_openmp_mutex             5.1                       1_gnu    intel
+boltons                   23.0.0             pyhd8ed1ab_0    conda-forge
+brotlipy                  0.7.0           py310h7f8727e_1002    intel
+bzip2                     1.0.8                hb9a14ef_9    intel
+ca-certificates           2023.01.10           h06a4308_0    intel
+certifi                   2022.12.7       py310h06a4308_0    intel
+cffi                      1.15.1          py310h74dc2b5_0    intel
+charset-normalizer        2.0.4              pyhd3eb1b0_0    intel
+conda                     23.3.1          py310hff52083_0    conda-forge
+conda-content-trust       0.1.3           py310h06a4308_0  
+conda-package-handling    2.0.2           py310h06a4308_0    intel
+conda-package-streaming   0.7.0           py310h06a4308_0    intel
+cryptography              39.0.1          py310h9ce1e76_0    intel
+idna                      3.4             py310h06a4308_0    intel
+intelpython               2023.1.0                      1    intel
+jsonpatch                 1.32               pyhd8ed1ab_0    conda-forge
+jsonpointer               2.0                        py_0    conda-forge
+libffi                    3.3                          14    intel
+libgcc-ng                 11.2.0               h1234567_1    intel
+libgomp                   11.2.0               h1234567_1    intel
+libstdcxx-ng              11.2.0               h1234567_1    intel
+ncurses                   6.4                  h6a678d5_0    intel
+openssl                   1.1.1t               h7f8727e_0    intel
+packaging                 23.0            py310h06a4308_0    intel
+pip                       23.0.1          py310h06a4308_0  
+pluggy                    1.0.0           py310h06a4308_1    intel
+pycosat                   0.6.4           py310h5eee18b_0    intel
+pycparser                 2.21               pyhd3eb1b0_0    intel
+pyopenssl                 23.0.0          py310h06a4308_0    intel
+pysocks                   1.7.1           py310h06a4308_0    intel
+python                    3.10.8               h2b77918_2    intel
+python_abi                3.10                    2_cp310    conda-forge
+readline                  8.2                  h5eee18b_0    intel
+requests                  2.28.1          py310h06a4308_1    intel
+ruamel.yaml               0.17.21         py310h5eee18b_0    intel
+ruamel.yaml.clib          0.2.6           py310h5eee18b_1    intel
+setuptools                65.6.3          py310h06a4308_0  
+six                       1.16.0             pyhd3eb1b0_1    intel
+sqlite                    3.41.1               h5eee18b_0    intel
+tk                        8.6.12               h1ccaba5_0    intel
+toolz                     0.12.0          py310h06a4308_0    intel
+tqdm                      4.64.0          py310h06a4308_0    intel
+urllib3                   1.26.14         py310h06a4308_0    intel
+wheel                     0.38.4          py310h06a4308_0  
+xz                        5.2.8                h5eee18b_0    intel
+zlib                      1.2.13               h5eee18b_0    intel
+zstandard                 0.19.0          py310h5eee18b_0    intel
+
+No errors reported.
