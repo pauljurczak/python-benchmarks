@@ -1,10 +1,5 @@
         .text
         .file   "<string>"
-        .section        .rodata.cst8,"aM",@progbits,8
-        .p2align        3
-.LCPI0_0:
-        .quad   -9223372036854775808
-        .text
         .globl  _ZN8__main__3f2dB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIsLi2E1C7mutable7alignedE
         .p2align        4, 0x90
         .type   _ZN8__main__3f2dB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIsLi2E1C7mutable7alignedE,@function
@@ -22,16 +17,16 @@ _ZN8__main__3f2dB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIsLi2E1C7mut
         .cfi_def_cfa_offset 48
         pushq   %rbx
         .cfi_def_cfa_offset 56
-        subq    $312, %rsp
-        .cfi_def_cfa_offset 368
+        subq    $200, %rsp
+        .cfi_def_cfa_offset 256
         .cfi_offset %rbx, -56
         .cfi_offset %r12, -48
         .cfi_offset %r13, -40
         .cfi_offset %r14, -32
         .cfi_offset %r15, -24
         .cfi_offset %rbp, -16
-        movq    384(%rsp), %r12
-        movq    376(%rsp), %rbp
+        movq    272(%rsp), %r12
+        movq    264(%rsp), %rbp
         movq    %rdi, %r15
         movabsq $NRT_incref, %rbx
         movq    %rdx, %rdi
@@ -44,7 +39,7 @@ _ZN8__main__3f2dB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIsLi2E1C7mut
         callq   *%rbx
         movq    %rbp, %rdi
         movq    %rbp, %rbx
-        movabsq $.const.picklebuf.123482793016000, %rax
+        movabsq $.const.picklebuf.125010160333376, %rax
         imulq   %r12, %rdi
         addq    %rdi, %rdi
         seto    %cl
@@ -58,466 +53,325 @@ _ZN8__main__3f2dB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIsLi2E1C7mut
         testq   %rax, %rax
         je      .LBB0_3
         movq    %rax, %rcx
-        movq    384(%rsp), %rax
-        movq    %r15, 128(%rsp)
+        movq    272(%rsp), %rax
+        movq    %r15, 120(%rsp)
         movq    %rbp, %r15
         movabsq $NRT_decref, %r14
         movq    %r13, %rdi
         movq    24(%rcx), %rbp
-        movq    %rcx, 112(%rsp)
+        movq    %rcx, 104(%rsp)
         addq    %rax, %rax
-        movq    %rax, 24(%rsp)
+        movq    %rax, 16(%rsp)
         callq   *%r14
         movq    %rbx, %rdx
         movabsq $memset, %rax
         movq    %rbp, %rdi
         xorl    %esi, %esi
-        movq    %rbx, 120(%rsp)
-        movq    %rbp, 16(%rsp)
+        movq    %rbx, 112(%rsp)
+        movq    %rbp, 8(%rsp)
         addq    %rbx, %rdx
         callq   *%rax
         movq    %r13, %rdi
-        movq    %r13, 136(%rsp)
+        movq    %r13, 128(%rsp)
         callq   *%r14
         leaq    -2(%r15), %rax
-        movq    %rax, 192(%rsp)
+        movq    %rax, 184(%rsp)
         testq   %rax, %rax
         jle     .LBB0_5
-        movq    384(%rsp), %rax
+        movq    272(%rsp), %rax
         leaq    -2(%rax), %rcx
         movq    %rcx, %rax
-        movq    %rcx, 8(%rsp)
+        movq    %rcx, (%rsp)
         testq   %rcx, %rcx
         jle     .LBB0_5
-        movq    384(%rsp), %rcx
-        movq    368(%rsp), %r9
-        vpxor   %xmm12, %xmm12, %xmm12
-        movl    $1, %ebx
-        leaq    -1(%rcx,%rcx), %rax
-        leaq    1(%rcx), %rsi
-        leaq    1(%rcx,%rcx), %rdi
-        leaq    -1(%rcx), %r15
-        leaq    4(%r9,%rcx,2), %r14
-        movq    %rcx, 32(%rsp)
-        movq    %rax, 176(%rsp)
-        leaq    -1(%rcx,%rcx,2), %rax
-        movq    %rdi, 168(%rsp)
-        movq    %rdi, 64(%rsp)
-        movq    %rsi, 184(%rsp)
-        movq    %rsi, 56(%rsp)
-        movq    %rax, 160(%rsp)
-        movq    8(%rsp), %rax
-        movq    %rax, %rdx
-        andq    $-8, %rax
-        movq    %rax, 48(%rsp)
-        incq    %rax
-        andq    $-16, %rdx
+        movq    272(%rsp), %rbp
+        movq    (%rsp), %r8
+        movq    256(%rsp), %r9
+        vpxor   %xmm0, %xmm0, %xmm0
+        movq    %r8, %rdi
+        leaq    -1(%rbp,%rbp), %rcx
+        andq    $-8, %r8
+        leaq    -1(%rbp,%rbp,2), %rax
+        leaq    -1(%rbp), %rsi
+        leaq    1(%rbp), %rdx
+        leaq    4(%r9,%rbp,2), %r14
+        movq    %rbp, 24(%rsp)
+        movq    %rcx, 168(%rsp)
+        leaq    1(%r8), %rcx
         movq    %rax, 152(%rsp)
-        movq    16(%rsp), %rax
-        movq    %rdx, 40(%rsp)
-        incq    %rdx
-        movq    %rdx, 104(%rsp)
-        movq    24(%rsp), %rdx
-        leaq    2(%rax,%rcx,2), %rbp
-        leaq    2(%r9,%rcx,2), %rax
-        movq    %rax, 88(%rsp)
-        movabsq $.LCPI0_0, %rax
-        leaq    2(%r9,%rdx,2), %r8
-        movq    %rdx, 80(%rsp)
-        vbroadcastsd    (%rax), %ymm0
-        leaq    4(%r9), %rax
-        movq    %rax, 144(%rsp)
-        xorl    %eax, %eax
-        movq    %rax, 72(%rsp)
+        movq    8(%rsp), %rax
+        andq    $-16, %rdi
+        movq    %rsi, 64(%rsp)
+        leaq    1(%rbp,%rbp), %rsi
+        movq    %r8, 40(%rsp)
+        movq    %rdx, 176(%rsp)
+        movq    %rdx, 48(%rsp)
+        movq    %rcx, 144(%rsp)
+        movq    16(%rsp), %rcx
+        movq    %rdi, 32(%rsp)
+        incq    %rdi
+        movq    %rsi, 160(%rsp)
+        movq    %rsi, 56(%rsp)
+        movq    %rdi, 96(%rsp)
+        leaq    2(%r9,%rbp,2), %rdi
+        movq    %rdi, 88(%rsp)
+        leaq    4(%r9), %rdi
+        movq    %rdi, 136(%rsp)
+        xorl    %edi, %edi
+        movq    %rdi, 72(%rsp)
+        leaq    2(%rax,%rbp,2), %r15
+        movl    $1, %eax
+        leaq    2(%r9,%rcx,2), %r13
+        movq    %rcx, 80(%rsp)
         jmp     .LBB0_10
         .p2align        4, 0x90
 .LBB0_25:
-        movq    24(%rsp), %rdx
-        movq    384(%rsp), %rcx
-        movq    96(%rsp), %rbp
-        movq    200(%rsp), %rsi
+        movq    16(%rsp), %rdx
+        movq    272(%rsp), %rcx
+        movq    192(%rsp), %rsi
         incq    72(%rsp)
+        addq    %rcx, 48(%rsp)
+        addq    %rcx, 24(%rsp)
         addq    %rcx, 56(%rsp)
-        addq    %rcx, 32(%rsp)
-        addq    %rcx, 64(%rsp)
         addq    %rcx, 80(%rsp)
         addq    %rdx, 88(%rsp)
-        leaq    1(%rsi), %rbx
+        leaq    1(%rsi), %rax
         addq    %rdx, %r14
-        addq    %rdx, %rbp
-        addq    %rdx, %r8
+        addq    %rdx, %r15
+        addq    %rdx, %r13
         addq    %rdx, %r9
-        cmpq    192(%rsp), %rsi
+        cmpq    184(%rsp), %rsi
         je      .LBB0_5
 .LBB0_10:
-        cmpq    $8, 8(%rsp)
-        movq    %rbp, 96(%rsp)
-        movl    $1, %ebp
-        movq    %rbx, 200(%rsp)
+        cmpq    $8, (%rsp)
+        movl    $1, %edi
+        movq    %rax, 192(%rsp)
         jb      .LBB0_23
         movq    72(%rsp), %rax
-        movq    384(%rsp), %rcx
-        movq    24(%rsp), %rdx
-        movq    168(%rsp), %rdi
-        movq    368(%rsp), %rsi
-        movq    176(%rsp), %r10
-        imulq   %rcx, %rax
-        addq    %rax, %rcx
-        leaq    (%rdx,%rax), %r11
+        movq    272(%rsp), %rcx
+        movq    160(%rsp), %r8
         movq    16(%rsp), %rdx
-        leaq    (%r15,%rax), %rbx
-        leaq    (%rdi,%rax), %rbp
-        movq    %r15, %rdi
-        movq    %rsi, %r15
+        movq    64(%rsp), %rsi
+        movq    168(%rsp), %r10
+        imulq   %rcx, %rax
+        leaq    (%rax,%rcx), %rdi
+        movq    152(%rsp), %rcx
+        leaq    (%r8,%rax), %rbp
+        movq    256(%rsp), %r8
+        leaq    (%rdx,%rax), %r11
+        movq    8(%rsp), %rdx
+        leaq    (%rsi,%rax), %rbx
         addq    %rax, %r10
-        movq    %rcx, 208(%rsp)
-        movq    160(%rsp), %rcx
-        leaq    (%rsi,%rbx,2), %rbx
-        leaq    2(%rsi,%rax,2), %rsi
         addq    %rax, %rcx
-        addq    184(%rsp), %rax
-        leaq    (%r15,%rcx,2), %rcx
+        leaq    2(%r8,%rax,2), %rsi
+        addq    176(%rsp), %rax
+        leaq    (%r8,%rbx,2), %rbx
+        leaq    (%r8,%rcx,2), %rcx
         leaq    (%rdx,%rax,2), %rax
         cmpq    %rbx, %rax
         leaq    (%rdx,%r10,2), %rbx
-        setb    %r13b
+        setb    %dl
         cmpq    %rbx, %rsi
-        leaq    (%r15,%rbp,2), %rsi
-        movl    $1, %ebp
+        leaq    (%r8,%rbp,2), %rsi
         setb    %r12b
         cmpq    %rcx, %rax
         setb    %cl
         cmpq    %rbx, %rsi
-        leaq    (%r15,%r11,2), %rsi
+        leaq    (%r8,%r11,2), %rsi
         setb    %r10b
         cmpq    %rsi, %rax
-        movq    208(%rsp), %rax
-        leaq    (%r15,%rax,2), %rsi
+        leaq    (%r8,%rdi,2), %rsi
+        movl    $1, %edi
         setb    %al
-        movq    %rdi, %r15
         cmpq    %rbx, %rsi
         setb    %sil
-        testb   %r12b, %r13b
+        testb   %r12b, %dl
         jne     .LBB0_23
         andb    %r10b, %cl
-        movl    $1, %ebp
+        movl    $1, %edi
         jne     .LBB0_23
         andb    %sil, %al
-        movl    $1, %ebp
+        movl    $1, %edi
         jne     .LBB0_23
-        cmpq    $16, 8(%rsp)
+        cmpq    $16, (%rsp)
         jae     .LBB0_16
-        xorl    %edi, %edi
+        xorl    %ebp, %ebp
         jmp     .LBB0_20
 .LBB0_16:
-        movq    40(%rsp), %rax
-        movq    96(%rsp), %rcx
-        xorl    %esi, %esi
+        movq    32(%rsp), %rcx
+        xorl    %eax, %eax
         .p2align        4, 0x90
 .LBB0_17:
-        vpmovsxwq       22(%r14,%rsi,2), %ymm1
-        vpmovsxwq       24(%r14,%rsi,2), %ymm4
-        vpmovsxwq       14(%r14,%rsi,2), %ymm3
-        vpmovsxwq       16(%r14,%rsi,2), %ymm7
-        vpmovsxwq       6(%r14,%rsi,2), %ymm5
-        vpmovsxwq       8(%r14,%rsi,2), %ymm8
-        vpmovsxwq       -2(%r14,%rsi,2), %ymm6
-        vpmovsxwq       (%r14,%rsi,2), %ymm9
-        vpmovsxwq       20(%r14,%rsi,2), %ymm11
-        vpmovsxwq       12(%r14,%rsi,2), %ymm13
-        vpmovsxwq       4(%r14,%rsi,2), %ymm14
-        vpsubq  %ymm4, %ymm1, %ymm4
-        vpsubq  %ymm7, %ymm3, %ymm7
-        vpsubq  %ymm8, %ymm5, %ymm8
-        vmovdqa %ymm1, %ymm2
-        vpsubq  %ymm9, %ymm6, %ymm9
-        vpsubq  %ymm14, %ymm5, %ymm14
-        vpsubq  %ymm4, %ymm12, %ymm10
-        vblendvpd       %ymm4, %ymm10, %ymm4, %ymm1
-        vpsubq  %ymm7, %ymm12, %ymm10
-        vmovupd %ymm1, 208(%rsp)
-        vblendvpd       %ymm7, %ymm10, %ymm7, %ymm1
-        vpsubq  %ymm8, %ymm12, %ymm10
-        vpxor   %xmm7, %xmm7, %xmm7
-        vmovupd %ymm1, 272(%rsp)
-        vblendvpd       %ymm8, %ymm10, %ymm8, %ymm1
-        vpsubq  %ymm9, %ymm12, %ymm10
-        vmovdqa %ymm2, %ymm8
-        vblendvpd       %ymm9, %ymm10, %ymm9, %ymm12
-        vpmovsxwq       -4(%r14,%rsi,2), %ymm9
-        vpsubq  %ymm13, %ymm3, %ymm10
-        vmovupd %ymm1, 240(%rsp)
-        vpmovsxwq       (%r8,%rsi,2), %ymm13
-        vxorpd  %ymm0, %ymm12, %ymm1
-        vpsubq  %ymm9, %ymm6, %ymm15
-        vpsubq  %ymm11, %ymm2, %ymm9
-        vpsubq  %ymm13, %ymm6, %ymm13
-        vpsubq  %ymm9, %ymm7, %ymm11
-        vblendvpd       %ymm9, %ymm11, %ymm9, %ymm9
-        vpsubq  %ymm10, %ymm7, %ymm11
-        vblendvpd       %ymm10, %ymm11, %ymm10, %ymm10
-        vpsubq  %ymm14, %ymm7, %ymm11
-        vblendvpd       %ymm14, %ymm11, %ymm14, %ymm11
-        vpsubq  %ymm15, %ymm7, %ymm14
-        vblendvpd       %ymm15, %ymm14, %ymm15, %ymm15
-        vpmovsxwq       8(%r8,%rsi,2), %ymm14
-        vxorpd  %ymm0, %ymm15, %ymm4
-        vpcmpgtq        %ymm1, %ymm4, %ymm1
-        vpmovsxwq       16(%r8,%rsi,2), %ymm4
-        vblendvpd       %ymm1, %ymm15, %ymm12, %ymm2
-        vpmovsxwq       2(%r9,%rsi,2), %ymm1
-        vpmovsxwq       24(%r8,%rsi,2), %ymm12
-        vpsubq  %ymm13, %ymm7, %ymm15
-        vblendvpd       %ymm13, %ymm15, %ymm13, %ymm13
-        vpsubq  %ymm14, %ymm5, %ymm14
-        vpsubq  %ymm14, %ymm7, %ymm15
-        vpsubq  %ymm4, %ymm3, %ymm4
-        vblendvpd       %ymm14, %ymm15, %ymm14, %ymm14
-        vpsubq  %ymm1, %ymm6, %ymm1
-        vpmovsxwq       10(%r9,%rsi,2), %ymm6
-        vpsubq  %ymm12, %ymm8, %ymm12
-        vpsubq  %ymm4, %ymm7, %ymm15
-        vblendvpd       %ymm4, %ymm15, %ymm4, %ymm4
-        vpsubq  %ymm12, %ymm7, %ymm15
-        vblendvpd       %ymm12, %ymm15, %ymm12, %ymm12
-        vpsubq  %ymm6, %ymm5, %ymm5
-        vpmovsxwq       18(%r9,%rsi,2), %ymm6
-        vpsubq  %ymm6, %ymm3, %ymm3
-        vpmovsxwq       26(%r9,%rsi,2), %ymm6
-        vpsubq  %ymm6, %ymm8, %ymm6
-        vmovupd 240(%rsp), %ymm8
-        vpsubq  %ymm6, %ymm7, %ymm15
-        vblendvpd       %ymm6, %ymm15, %ymm6, %ymm6
-        vpsubq  %ymm3, %ymm7, %ymm15
-        vblendvpd       %ymm3, %ymm15, %ymm3, %ymm3
-        vpsubq  %ymm5, %ymm7, %ymm15
-        vblendvpd       %ymm5, %ymm15, %ymm5, %ymm5
-        vpsubq  %ymm1, %ymm7, %ymm15
-        vxorpd  %ymm0, %ymm11, %ymm7
-        vblendvpd       %ymm1, %ymm15, %ymm1, %ymm1
-        vxorpd  %ymm0, %ymm8, %ymm15
-        vpcmpgtq        %ymm15, %ymm7, %ymm7
-        vmovupd 272(%rsp), %ymm15
-        vblendvpd       %ymm7, %ymm11, %ymm8, %ymm7
-        vxorpd  %ymm0, %ymm10, %ymm11
-        vxorpd  %ymm0, %ymm15, %ymm8
-        vpcmpgtq        %ymm8, %ymm11, %ymm8
-        vxorpd  %ymm0, %ymm9, %ymm11
-        vblendvpd       %ymm8, %ymm10, %ymm15, %ymm8
-        vmovupd 208(%rsp), %ymm15
-        vxorpd  %ymm0, %ymm15, %ymm10
-        vpcmpgtq        %ymm10, %ymm11, %ymm10
-        vxorpd  %ymm0, %ymm12, %ymm11
-        vblendvpd       %ymm10, %ymm9, %ymm15, %ymm9
-        vxorpd  %ymm0, %ymm9, %ymm10
-        vpcmpgtq        %ymm10, %ymm11, %ymm10
-        vxorpd  %ymm0, %ymm4, %ymm11
-        vblendvpd       %ymm10, %ymm12, %ymm9, %ymm9
-        vxorpd  %ymm0, %ymm8, %ymm10
-        vxorpd  %xmm12, %xmm12, %xmm12
-        vpcmpgtq        %ymm10, %ymm11, %ymm10
-        vblendvpd       %ymm10, %ymm4, %ymm8, %ymm4
-        vxorpd  %ymm0, %ymm7, %ymm8
-        vxorpd  %ymm0, %ymm14, %ymm10
-        vpcmpgtq        %ymm8, %ymm10, %ymm8
-        vxorpd  %ymm0, %ymm13, %ymm10
-        vblendvpd       %ymm8, %ymm14, %ymm7, %ymm7
-        vxorpd  %ymm0, %ymm2, %ymm8
-        vpcmpgtq        %ymm8, %ymm10, %ymm8
-        vxorpd  %ymm0, %ymm1, %ymm10
-        vblendvpd       %ymm8, %ymm13, %ymm2, %ymm2
-        vxorpd  %ymm0, %ymm2, %ymm8
-        vpcmpgtq        %ymm8, %ymm10, %ymm8
-        vxorpd  %ymm0, %ymm5, %ymm10
-        vblendvpd       %ymm8, %ymm1, %ymm2, %ymm1
-        vxorpd  %ymm0, %ymm7, %ymm2
-        vpcmpgtq        %ymm2, %ymm10, %ymm2
-        vpblendw        $17, %ymm1, %ymm12, %ymm1
-        vblendvpd       %ymm2, %ymm5, %ymm7, %ymm2
-        vxorpd  %ymm0, %ymm4, %ymm5
-        vxorpd  %ymm0, %ymm3, %ymm7
-        vpcmpgtq        %ymm5, %ymm7, %ymm5
-        vxorpd  %ymm0, %ymm6, %ymm7
-        vpblendw        $17, %ymm2, %ymm12, %ymm2
-        vblendvpd       %ymm5, %ymm3, %ymm4, %ymm3
-        vxorpd  %ymm0, %ymm9, %ymm4
-        vpackusdw       %ymm2, %ymm1, %ymm1
-        vpcmpgtq        %ymm4, %ymm7, %ymm4
-        vpblendw        $17, %ymm3, %ymm12, %ymm3
+        vpbroadcastq    6(%r14,%rax,2), %xmm5
+        vpmovsxwq       8(%r14,%rax,2), %ymm1
+        vpmovsxwq       (%r14,%rax,2), %ymm2
+        vpmovsxwq       -2(%r14,%rax,2), %ymm6
+        vpmovsxwq       24(%r14,%rax,2), %ymm3
+        vpmovsxwq       16(%r14,%rax,2), %ymm4
+        vpmovsxwq       14(%r14,%rax,2), %ymm7
+        vpmovsxwq       %xmm5, %ymm5
+        vpsubq  %ymm2, %ymm6, %ymm2
+        vpsubq  %ymm4, %ymm7, %ymm4
+        vmovdqu -2(%r14,%rax,2), %ymm6
+        vpsubq  %ymm2, %ymm0, %ymm7
+        vblendvpd       %ymm2, %ymm7, %ymm2, %ymm2
+        vpsubq  %ymm4, %ymm0, %ymm7
+        vblendvpd       %ymm4, %ymm7, %ymm4, %ymm4
+        vpblendw        $17, %ymm2, %ymm0, %ymm2
+        vpsubq  %ymm1, %ymm5, %ymm1
+        vpbroadcastq    22(%r14,%rax,2), %xmm5
+        vpblendw        $17, %ymm4, %ymm0, %ymm4
+        vpsubq  %ymm1, %ymm0, %ymm8
+        vblendvpd       %ymm1, %ymm8, %ymm1, %ymm1
+        vpblendw        $17, %ymm1, %ymm0, %ymm1
+        vpackusdw       %ymm1, %ymm2, %ymm1
+        vpsubw  -4(%r14,%rax,2), %ymm6, %ymm2
         vpermq  $216, %ymm1, %ymm1
-        vblendvpd       %ymm4, %ymm6, %ymm9, %ymm4
-        vpblendw        $17, %ymm4, %ymm12, %ymm4
-        vpackusdw       %ymm4, %ymm3, %ymm3
-        vpermq  $216, %ymm3, %ymm2
-        vpackusdw       %ymm2, %ymm1, %ymm1
+        vpmovsxwq       %xmm5, %ymm5
+        vpsubq  %ymm3, %ymm5, %ymm3
+        vpabsw  %ymm2, %ymm2
+        vpsubq  %ymm3, %ymm0, %ymm8
+        vblendvpd       %ymm3, %ymm8, %ymm3, %ymm3
+        vpblendw        $17, %ymm3, %ymm0, %ymm3
+        vpackusdw       %ymm3, %ymm4, %ymm3
+        vpermq  $216, %ymm3, %ymm3
+        vpackusdw       %ymm3, %ymm1, %ymm1
+        vpsubw  (%r13,%rax,2), %ymm6, %ymm3
         vpermq  $216, %ymm1, %ymm1
-        vmovdqu %ymm1, (%rcx,%rsi,2)
-        addq    $16, %rsi
-        cmpq    %rsi, %rax
+        vpabsw  %ymm3, %ymm3
+        vpmaxsw %ymm3, %ymm2, %ymm2
+        vpsubw  2(%r9,%rax,2), %ymm6, %ymm3
+        vpabsw  %ymm3, %ymm3
+        vpmaxsw %ymm3, %ymm2, %ymm2
+        vpmaxsw %ymm2, %ymm1, %ymm1
+        vmovdqu %ymm1, (%r15,%rax,2)
+        addq    $16, %rax
+        cmpq    %rax, %rcx
         jne     .LBB0_17
-        cmpq    %rax, 8(%rsp)
+        cmpq    %rcx, (%rsp)
         je      .LBB0_25
-        movq    40(%rsp), %rdi
-        movq    104(%rsp), %rbp
-        testb   $8, 8(%rsp)
+        movq    32(%rsp), %rbp
+        movq    96(%rsp), %rdi
+        testb   $8, (%rsp)
         je      .LBB0_23
 .LBB0_20:
-        movq    56(%rsp), %rax
-        movq    48(%rsp), %rsi
-        movq    32(%rsp), %rdx
-        movq    16(%rsp), %rcx
-        movq    144(%rsp), %rbx
-        movq    368(%rsp), %r10
-        xorl    %r11d, %r11d
-        addq    %rdi, %rax
-        leaq    (%rdi,%rdx), %rbp
-        subq    %rdi, %rsi
-        leaq    (%rcx,%rax,2), %rax
-        leaq    (%r9,%rdi,2), %rcx
-        addq    64(%rsp), %rdi
-        leaq    (%rbx,%rbp,2), %rbp
+        movq    48(%rsp), %rcx
+        movq    8(%rsp), %rdx
+        movq    40(%rsp), %rax
+        movq    136(%rsp), %r10
+        movq    256(%rsp), %r8
+        leaq    (%r9,%rbp,2), %rsi
+        xorl    %ebx, %ebx
+        addq    %rbp, %rcx
+        subq    %rbp, %rax
+        leaq    (%rdx,%rcx,2), %rcx
+        movq    24(%rsp), %rdx
+        leaq    (%rbp,%rdx), %rdi
+        addq    56(%rsp), %rbp
         leaq    (%r10,%rdi,2), %rdi
+        leaq    (%r8,%rbp,2), %rbp
         .p2align        4, 0x90
 .LBB0_21:
-        vpmovsxwq       6(%rbp,%r11,2), %ymm1
-        vpmovsxwq       8(%rbp,%r11,2), %ymm2
-        vpmovsxwq       -2(%rbp,%r11,2), %ymm3
-        vpmovsxwq       (%rbp,%r11,2), %ymm4
-        vpmovsxwq       4(%rbp,%r11,2), %ymm6
-        vpmovsxwq       -4(%rbp,%r11,2), %ymm7
-        vpmovsxwq       (%rdi,%r11,2), %ymm8
-        vpmovsxwq       10(%rcx,%r11,2), %ymm10
-        vpmovsxwq       2(%rcx,%r11,2), %ymm11
-        vpsubq  %ymm2, %ymm1, %ymm2
-        vpsubq  %ymm4, %ymm3, %ymm4
-        vpsubq  %ymm6, %ymm1, %ymm6
-        vpsubq  %ymm8, %ymm3, %ymm8
-        vpsubq  %ymm2, %ymm12, %ymm5
-        vpsubq  %ymm8, %ymm12, %ymm9
-        vblendvpd       %ymm2, %ymm5, %ymm2, %ymm2
-        vpsubq  %ymm4, %ymm12, %ymm5
-        vblendvpd       %ymm8, %ymm9, %ymm8, %ymm8
-        vblendvpd       %ymm4, %ymm5, %ymm4, %ymm4
-        vpsubq  %ymm7, %ymm3, %ymm5
-        vpsubq  %ymm6, %ymm12, %ymm7
-        vpsubq  %ymm11, %ymm3, %ymm3
-        vblendvpd       %ymm6, %ymm7, %ymm6, %ymm6
-        vpsubq  %ymm5, %ymm12, %ymm7
-        vblendvpd       %ymm5, %ymm7, %ymm5, %ymm5
-        vpmovsxwq       8(%rdi,%r11,2), %ymm7
-        vpsubq  %ymm7, %ymm1, %ymm7
-        vpsubq  %ymm10, %ymm1, %ymm1
-        vxorpd  %ymm0, %ymm5, %ymm10
-        vpsubq  %ymm7, %ymm12, %ymm9
-        vblendvpd       %ymm7, %ymm9, %ymm7, %ymm7
-        vpsubq  %ymm1, %ymm12, %ymm9
-        vblendvpd       %ymm1, %ymm9, %ymm1, %ymm1
-        vpsubq  %ymm3, %ymm12, %ymm9
-        vblendvpd       %ymm3, %ymm9, %ymm3, %ymm3
-        vxorpd  %ymm0, %ymm4, %ymm9
-        vpcmpgtq        %ymm9, %ymm10, %ymm9
-        vxorpd  %ymm0, %ymm6, %ymm10
-        vblendvpd       %ymm9, %ymm5, %ymm4, %ymm4
-        vxorpd  %ymm0, %ymm2, %ymm5
-        vpcmpgtq        %ymm5, %ymm10, %ymm5
-        vblendvpd       %ymm5, %ymm6, %ymm2, %ymm2
-        vxorpd  %ymm0, %ymm7, %ymm6
-        vxorpd  %ymm0, %ymm2, %ymm5
-        vpcmpgtq        %ymm5, %ymm6, %ymm5
-        vxorpd  %ymm0, %ymm8, %ymm6
-        vblendvpd       %ymm5, %ymm7, %ymm2, %ymm2
-        vxorpd  %ymm0, %ymm4, %ymm5
-        vpcmpgtq        %ymm5, %ymm6, %ymm5
-        vxorpd  %ymm0, %ymm3, %ymm6
-        vblendvpd       %ymm5, %ymm8, %ymm4, %ymm4
-        vxorpd  %ymm0, %ymm4, %ymm5
-        vpcmpgtq        %ymm5, %ymm6, %ymm5
-        vxorpd  %ymm0, %ymm1, %ymm6
-        vblendvpd       %ymm5, %ymm3, %ymm4, %ymm3
-        vxorpd  %ymm0, %ymm2, %ymm4
-        vpcmpgtq        %ymm4, %ymm6, %ymm4
-        vblendvpd       %ymm4, %ymm1, %ymm2, %ymm1
-        vpblendw        $17, %ymm3, %ymm12, %ymm2
-        vpblendw        $17, %ymm1, %ymm12, %ymm1
-        vpackusdw       %ymm1, %ymm2, %ymm1
-        vextracti128    $1, %ymm1, %xmm2
-        vpackusdw       %xmm2, %xmm1, %xmm1
-        vpshufd $216, %xmm1, %xmm1
-        vmovdqu %xmm1, (%rax,%r11,2)
-        addq    $8, %r11
-        cmpq    %r11, %rsi
+        vmovdqu -2(%rdi,%rbx,2), %xmm1
+        vpbroadcastq    6(%rdi,%rbx,2), %xmm5
+        vpmovsxwq       (%rdi,%rbx,2), %ymm2
+        vpmovsxwq       8(%rdi,%rbx,2), %ymm3
+        vpmovsxwq       %xmm1, %ymm4
+        vpmovsxwq       %xmm5, %ymm5
+        vpsubq  %ymm2, %ymm4, %ymm2
+        vpsubq  %ymm3, %ymm5, %ymm3
+        vpsubq  %ymm2, %ymm0, %ymm4
+        vblendvpd       %ymm2, %ymm4, %ymm2, %ymm2
+        vpsubq  %ymm3, %ymm0, %ymm4
+        vblendvpd       %ymm3, %ymm4, %ymm3, %ymm3
+        vpblendw        $17, %ymm2, %ymm0, %ymm2
+        vpsubw  (%rbp,%rbx,2), %xmm1, %xmm4
+        vpblendw        $17, %ymm3, %ymm0, %ymm3
+        vpackusdw       %ymm3, %ymm2, %ymm2
+        vextracti128    $1, %ymm2, %xmm3
+        vpackusdw       %xmm3, %xmm2, %xmm2
+        vpsubw  -4(%rdi,%rbx,2), %xmm1, %xmm3
+        vpsubw  2(%rsi,%rbx,2), %xmm1, %xmm1
+        vpshufd $216, %xmm2, %xmm2
+        vpabsw  %xmm4, %xmm4
+        vpabsw  %xmm3, %xmm3
+        vpabsw  %xmm1, %xmm1
+        vpmaxsw %xmm4, %xmm3, %xmm3
+        vpmaxsw %xmm1, %xmm3, %xmm1
+        vpmaxsw %xmm1, %xmm2, %xmm1
+        vmovdqu %xmm1, (%rcx,%rbx,2)
+        addq    $8, %rbx
+        cmpq    %rbx, %rax
         jne     .LBB0_21
-        movq    152(%rsp), %rbp
-        movq    48(%rsp), %rax
-        cmpq    %rax, 8(%rsp)
+        movq    144(%rsp), %rdi
+        movq    40(%rsp), %rax
+        cmpq    %rax, (%rsp)
         je      .LBB0_25
         .p2align        4, 0x90
 .LBB0_23:
-        movq    32(%rsp), %rax
-        movq    16(%rsp), %rsi
+        movq    24(%rsp), %rax
+        movq    8(%rsp), %rcx
+        movq    64(%rsp), %r12
         movq    88(%rsp), %rdx
-        movq    %r15, %r12
-        leaq    (%r9,%rbp,2), %r11
-        xorl    %ebx, %ebx
-        subq    %rbp, %r12
-        leaq    (%rbp,%rax), %rcx
-        leaq    (%rdx,%rbp,2), %rdi
-        addq    80(%rsp), %rbp
-        leaq    (%rsi,%rcx,2), %r10
-        movq    368(%rsp), %rcx
-        leaq    (%rcx,%rbp,2), %r13
+        leaq    (%r9,%rdi,2), %r10
+        xorl    %r11d, %r11d
+        addq    %rdi, %rax
+        subq    %rdi, %r12
+        leaq    (%rdx,%rdi,2), %rbp
+        addq    80(%rsp), %rdi
+        leaq    (%rcx,%rax,2), %r8
+        movq    256(%rsp), %rcx
+        leaq    (%rcx,%rdi,2), %rdi
         .p2align        4, 0x90
 .LBB0_24:
-        movswq  -2(%rdi,%rbx,2), %rbp
-        movswq  (%rdi,%rbx,2), %rcx
-        movswq  -4(%rdi,%rbx,2), %rax
-        movq    %rbp, %rdx
-        movq    %rbp, %rsi
-        subq    %rcx, %rdx
-        movq    %rdx, %rcx
-        negq    %rcx
-        cmovsq  %rdx, %rcx
-        movswq  (%r13,%rbx,2), %rdx
-        subq    %rax, %rsi
-        movq    %rsi, %rax
-        negq    %rax
-        cmovsq  %rsi, %rax
-        movq    %rbp, %rsi
-        subq    %rdx, %rsi
-        movq    %rsi, %rdx
+        movswq  -2(%rbp,%r11,2), %rax
+        movswq  (%rbp,%r11,2), %rdx
+        movq    %rax, %rbx
+        subq    %rdx, %rbx
+        movq    %rbx, %rdx
         negq    %rdx
-        cmovsq  %rsi, %rdx
-        movswq  (%r11,%rbx,2), %rsi
-        subq    %rsi, %rbp
-        movq    %rbp, %rsi
-        negq    %rsi
-        cmovsq  %rbp, %rsi
-        cmpq    %rcx, %rax
-        cmovbeq %rcx, %rax
-        cmpq    %rax, %rdx
-        cmovaq  %rdx, %rax
-        cmpq    %rax, %rsi
-        cmovaq  %rsi, %rax
-        movw    %ax, (%r10,%rbx,2)
-        incq    %rbx
-        cmpq    %rbx, %r12
+        cmovsq  %rbx, %rdx
+        movl    %eax, %ebx
+        subw    -4(%rbp,%r11,2), %bx
+        movl    %ebx, %ecx
+        negw    %cx
+        cmovsw  %bx, %cx
+        movl    %eax, %ebx
+        subw    (%rdi,%r11,2), %bx
+        movl    %ebx, %esi
+        negw    %si
+        cmovsw  %bx, %si
+        movzwl  (%r10,%r11,2), %ebx
+        subw    %bx, %ax
+        movl    %eax, %ebx
+        negw    %bx
+        cmovsw  %ax, %bx
+        cmpw    %dx, %cx
+        cmovlel %edx, %ecx
+        cmpw    %cx, %si
+        cmovlel %ecx, %esi
+        cmpw    %si, %bx
+        cmovlel %esi, %ebx
+        movw    %bx, (%r8,%r11,2)
+        incq    %r11
+        cmpq    %r11, %r12
         jne     .LBB0_24
         jmp     .LBB0_25
 .LBB0_5:
-        movq    128(%rsp), %rax
-        movq    112(%rsp), %rcx
-        movq    120(%rsp), %rdx
-        movq    16(%rsp), %rsi
-        movq    136(%rsp), %rdi
+        movq    120(%rsp), %rax
+        movq    104(%rsp), %rcx
+        movq    112(%rsp), %rdx
+        movq    8(%rsp), %rsi
+        movq    128(%rsp), %rdi
         movq    %rcx, (%rax)
         movq    $0, 8(%rax)
         movq    %rdx, 16(%rax)
-        movq    376(%rsp), %rdx
+        movq    264(%rsp), %rdx
         movq    $2, 24(%rax)
         movq    %rsi, 32(%rax)
-        movq    384(%rsp), %rsi
+        movq    272(%rsp), %rsi
         movq    %rdx, 40(%rax)
-        movq    24(%rsp), %rdx
+        movq    16(%rsp), %rdx
         movq    %rsi, 48(%rax)
         movq    %rdx, 56(%rax)
         movq    $2, 64(%rax)
@@ -526,7 +380,7 @@ _ZN8__main__3f2dB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIsLi2E1C7mut
         callq   *%rax
         xorl    %eax, %eax
 .LBB0_6:
-        addq    $312, %rsp
+        addq    $200, %rsp
         .cfi_def_cfa_offset 56
         popq    %rbx
         .cfi_def_cfa_offset 48
@@ -542,8 +396,8 @@ _ZN8__main__3f2dB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIsLi2E1C7mut
         .cfi_def_cfa_offset 8
         retq
 .LBB0_3:
-        .cfi_def_cfa_offset 368
-        movabsq $.const.picklebuf.123482793016896, %rax
+        .cfi_def_cfa_offset 256
+        movabsq $.const.picklebuf.125010160334272, %rax
 .LBB0_4:
         movq    %rax, (%r14)
         movl    $1, %eax
@@ -694,8 +548,8 @@ _ZN7cpython8__main__3f2dB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIsLi
         callq   *%rax
         xorl    %ebx, %ebx
 .LBB1_16:
-        movabsq $.const.pickledata.123483673012448, %rdi
-        movabsq $.const.pickledata.123483673012448.sha1, %rdx
+        movabsq $.const.pickledata.125011039299808, %rdi
+        movabsq $.const.pickledata.125011039299808.sha1, %rdx
         movabsq $numba_unpickle, %rax
         movl    $32, %esi
         callq   *%rax
@@ -896,7 +750,7 @@ cfunc._ZN8__main__3f2dB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIsLi2E
         movq    %r15, %rdi
         callq   *%rax
 .LBB2_6:
-        movabsq $".const.<numba.core.cpu.CPUContext object at 0x704e93fce690>", %rdi
+        movabsq $".const.<numba.core.cpu.CPUContext object at 0x71b2322c55b0>", %rdi
         movabsq $PyUnicode_FromString, %rax
         callq   *%rax
         movq    %rax, %r14
@@ -994,17 +848,17 @@ NRT_decref:
         .asciz  "`env.consts` is NULL in `read_const`"
         .size   ".const.`env.consts` is NULL in `read_const`", 37
 
-        .type   .const.pickledata.123483673012448,@object
+        .type   .const.pickledata.125011039299808,@object
         .p2align        4
-.const.pickledata.123483673012448:
+.const.pickledata.125011039299808:
         .ascii  "\200\004\225\025\000\000\000\000\000\000\000\214\005numpy\224\214\007ndarray\224\223\224."
-        .size   .const.pickledata.123483673012448, 32
+        .size   .const.pickledata.125011039299808, 32
 
-        .type   .const.pickledata.123483673012448.sha1,@object
+        .type   .const.pickledata.125011039299808.sha1,@object
         .p2align        4
-.const.pickledata.123483673012448.sha1:
+.const.pickledata.125011039299808.sha1:
         .ascii  "\337\274\375\323\237\313&\364\320\306\200\225D\207\270\300\265;\270\243"
-        .size   .const.pickledata.123483673012448.sha1, 20
+        .size   .const.pickledata.125011039299808.sha1, 20
 
         .type   ".const.Error creating Python tuple from runtime exception arguments",@object
         .p2align        4
@@ -1030,67 +884,67 @@ NRT_decref:
         .asciz  "unknown error when calling native function"
         .size   ".const.unknown error when calling native function.2", 43
 
-        .type   ".const.<numba.core.cpu.CPUContext object at 0x704e93fce690>",@object
+        .type   ".const.<numba.core.cpu.CPUContext object at 0x71b2322c55b0>",@object
         .p2align        4
-".const.<numba.core.cpu.CPUContext object at 0x704e93fce690>":
-        .asciz  "<numba.core.cpu.CPUContext object at 0x704e93fce690>"
-        .size   ".const.<numba.core.cpu.CPUContext object at 0x704e93fce690>", 53
+".const.<numba.core.cpu.CPUContext object at 0x71b2322c55b0>":
+        .asciz  "<numba.core.cpu.CPUContext object at 0x71b2322c55b0>"
+        .size   ".const.<numba.core.cpu.CPUContext object at 0x71b2322c55b0>", 53
 
         .type   _ZN08NumbaEnv5numba2np8arrayobj16ol_np_zeros_like12_3clocals_3e4implB2v2B42c8tJTIeFIjxB2IKSgI4CrvQClcaMQ5hEEUSJJgA_3dE5ArrayIsLi2E1C7mutable7alignedE27omitted_28default_3dNone_29,@object
         .comm   _ZN08NumbaEnv5numba2np8arrayobj16ol_np_zeros_like12_3clocals_3e4implB2v2B42c8tJTIeFIjxB2IKSgI4CrvQClcaMQ5hEEUSJJgA_3dE5ArrayIsLi2E1C7mutable7alignedE27omitted_28default_3dNone_29,8,8
         .type   _ZN08NumbaEnv5numba2np8arrayobj16ol_np_empty_like12_3clocals_3e4implB2v3B42c8tJTIeFIjxB2IKSgI4CrvQClcaMQ5hEEUSJJgA_3dE5ArrayIsLi2E1C7mutable7alignedEv,@object
         .comm   _ZN08NumbaEnv5numba2np8arrayobj16ol_np_empty_like12_3clocals_3e4implB2v3B42c8tJTIeFIjxB2IKSgI4CrvQClcaMQ5hEEUSJJgA_3dE5ArrayIsLi2E1C7mutable7alignedEv,8,8
-        .type   .const.pickledata.123482793016000,@object
+        .type   .const.pickledata.125010160333376,@object
         .p2align        4
-.const.pickledata.123482793016000:
+.const.pickledata.125010160333376:
         .ascii  "\200\004\225~\000\000\000\000\000\000\000\214\bbuiltins\224\214\nValueError\224\223\224\214[array is too big; `arr.size * arr.dtype.itemsize` is larger than the maximum possible size.\224\205\224N\207\224."
-        .size   .const.pickledata.123482793016000, 137
+        .size   .const.pickledata.125010160333376, 137
 
-        .type   .const.pickledata.123482793016000.sha1,@object
+        .type   .const.pickledata.125010160333376.sha1,@object
         .p2align        4
-.const.pickledata.123482793016000.sha1:
+.const.pickledata.125010160333376.sha1:
         .ascii  "X\341N\314\265\007\261\340 i\201t\002#\346\205\313\214<W"
-        .size   .const.pickledata.123482793016000.sha1, 20
+        .size   .const.pickledata.125010160333376.sha1, 20
 
-        .type   .const.picklebuf.123482793016000,@object
+        .type   .const.picklebuf.125010160333376,@object
         .p2align        4
-.const.picklebuf.123482793016000:
-        .quad   .const.pickledata.123482793016000
+.const.picklebuf.125010160333376:
+        .quad   .const.pickledata.125010160333376
         .long   137
         .zero   4
-        .quad   .const.pickledata.123482793016000.sha1
+        .quad   .const.pickledata.125010160333376.sha1
         .quad   0
         .long   0
         .zero   4
-        .size   .const.picklebuf.123482793016000, 40
+        .size   .const.picklebuf.125010160333376, 40
 
         .type   _ZN08NumbaEnv5numba2np8arrayobj15_call_allocatorB2v4B42c8tJTC_2fWQA93W1AaAIYBPIqRBFCjDSZRVAJmaQIAEN29typeref_5b_3cclass_20_27numba4core5types8npytypes14Array_27_3e_5dExj,@object
         .comm   _ZN08NumbaEnv5numba2np8arrayobj15_call_allocatorB2v4B42c8tJTC_2fWQA93W1AaAIYBPIqRBFCjDSZRVAJmaQIAEN29typeref_5b_3cclass_20_27numba4core5types8npytypes14Array_27_3e_5dExj,8,8
         .type   _ZN08NumbaEnv5numba2np8arrayobj18_ol_array_allocate12_3clocals_3e4implB2v5B42c8tJTIeFIjxB2IKSgI4CrvQClcaMQ5hEEUSJJgA_3dEN29typeref_5b_3cclass_20_27numba4core5types8npytypes14Array_27_3e_5dExj,@object
         .comm   _ZN08NumbaEnv5numba2np8arrayobj18_ol_array_allocate12_3clocals_3e4implB2v5B42c8tJTIeFIjxB2IKSgI4CrvQClcaMQ5hEEUSJJgA_3dEN29typeref_5b_3cclass_20_27numba4core5types8npytypes14Array_27_3e_5dExj,8,8
-        .type   .const.pickledata.123482793016896,@object
+        .type   .const.pickledata.125010160334272,@object
         .p2align        4
-.const.pickledata.123482793016896:
+.const.pickledata.125010160334272:
         .ascii  "\200\004\225K\000\000\000\000\000\000\000\214\bbuiltins\224\214\013MemoryError\224\223\224\214'Allocation failed (probably too large).\224\205\224N\207\224."
-        .size   .const.pickledata.123482793016896, 86
+        .size   .const.pickledata.125010160334272, 86
 
-        .type   .const.pickledata.123482793016896.sha1,@object
+        .type   .const.pickledata.125010160334272.sha1,@object
         .p2align        4
-.const.pickledata.123482793016896.sha1:
+.const.pickledata.125010160334272.sha1:
         .ascii  "\272(\235\201\360\\p \363G|\025sH\004\337e\253\342\t"
-        .size   .const.pickledata.123482793016896.sha1, 20
+        .size   .const.pickledata.125010160334272.sha1, 20
 
-        .type   .const.picklebuf.123482793016896,@object
+        .type   .const.picklebuf.125010160334272,@object
         .p2align        4
-.const.picklebuf.123482793016896:
-        .quad   .const.pickledata.123482793016896
+.const.picklebuf.125010160334272:
+        .quad   .const.pickledata.125010160334272
         .long   86
         .zero   4
-        .quad   .const.pickledata.123482793016896.sha1
+        .quad   .const.pickledata.125010160334272.sha1
         .quad   0
         .long   0
         .zero   4
-        .size   .const.picklebuf.123482793016896, 40
+        .size   .const.picklebuf.125010160334272, 40
 
         .type   _ZN08NumbaEnv5numba2np8arrayobj18ol_array_zero_fill12_3clocals_3e4implB2v6B42c8tJTIeFIjxB2IKSgI4CrvQClcaMQ5hEEUSJJgA_3dE5ArrayIsLi2E1C7mutable7alignedE,@object
         .comm   _ZN08NumbaEnv5numba2np8arrayobj18ol_array_zero_fill12_3clocals_3e4implB2v6B42c8tJTIeFIjxB2IKSgI4CrvQClcaMQ5hEEUSJJgA_3dE5ArrayIsLi2E1C7mutable7alignedE,8,8
