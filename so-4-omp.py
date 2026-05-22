@@ -56,8 +56,8 @@ def countArmSIMD(f):
 
   counts = defaultdict(int)
   
-  for m in re.findall('v\\d{1,2}.(\\d{1,2}.)', asm):
-    counts[m.group(1)] += 1
+  for m in re.findall('v\\d{1,2}\\.(\\d{1,2}.)', asm):
+    counts[m] += 1
 
   log = ''
 
